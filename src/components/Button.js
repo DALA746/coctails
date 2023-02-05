@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BackButton = ({ btnText, onClick }) => {
+const Button = ({ btnText, onClick }) => {
   return (
     <button
       onClick={onClick}
@@ -10,4 +10,4 @@ const BackButton = ({ btnText, onClick }) => {
   );
 };
 
-export default BackButton;
+export default Button;

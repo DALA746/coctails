@@ -1,15 +1,6 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    animation: {
-      scrollingText: ''
-    },
-    keyframes: {
-      wiggle: {
-        '0%, 100%': { transform: 'rotate(-3deg)' },
-        '50%': { transform: 'rotate(3deg)' }
-      }
-    },
     fontFamily: {
       primary: 'Poppins',
       secondary: 'Reenie Beanie'

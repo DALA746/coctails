@@ -1,28 +1,44 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CoctailContext } from '../context/CoctailContext';
 import Button from './Button';
 
 const FilterButtons = () => {
   const { fetchCoctails } = useContext(CoctailContext);
+
+  const buttons = [
+    {
+      id: 1,
+      buttonName: 'Coctails',
+      endpoint: '/filter.php?c=Cocktail'
+    },
+    {
+      id: 2,
+      buttonName: 'Drinks',
+      endpoint: '/filter.php?c=Ordinary_Drink'
+    },
+    {
+      id: 3,
+      buttonName: 'Non alcoholic',
+      endpoint: '/filter.php?a=Non_Alcoholic'
+    },
+    {
+      id: 4,
+      buttonName: 'Alcoholic',
+      endpoint: '/filter.php?a=Alcoholic'
+    }
+  ];
+
   return (
     <section className="w-full flex  items-center justify-center">
       <div className="container mx-auto flex flex-col items-center md:flex-row gap-8">
-        <Button
-          onClick={(e) => fetchCoctails('/filter.php?c=Cocktail')}
-          btnText="Coctails"
-        />
-        <Button
-          onClick={() => fetchCoctails('/filter.php?c=Ordinary_Drink')}
-          btnText="Drinks"
-        />
-        <Button
-          onClick={() => fetchCoctails('/filter.php?a=Non_Alcoholic')}
-          btnText="Non alcoholic"
-        />
-        <Button
-          onClick={() => fetchCoctails('/filter.php?a=Alcoholic')}
-          btnText="Alcoholic"
-        />
+        {buttons.map((btn) => {
+          return (
+            <Button
+              onClick={() => fetchCoctails(btn.endpoint)}
+              btnText={btn.buttonName}
+            />
+          );
+        })}
       </div>
     </section>
   );
