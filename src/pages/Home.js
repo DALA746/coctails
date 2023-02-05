@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { CoctailContext } from '../contexts/CoctailContext';
+import { CoctailContext } from '../context/CoctailContext';
 import Coctail from '../components/Coctail';
 import Hero from '../components/Hero';
 import Button from '../components/Button';

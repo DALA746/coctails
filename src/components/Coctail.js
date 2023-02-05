@@ -1,6 +1,4 @@
 import React, { useContext, useEffect } from 'react';
-import { CoctailContext } from '../contexts/CoctailContext';
-import { baseURL } from '../utils/utils';
 import { Link } from 'react-router-dom';
 
 const Coctail = ({ coctail }) => {

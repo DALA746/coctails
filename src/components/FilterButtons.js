@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { CoctailContext } from '../contexts/CoctailContext';
+import { CoctailContext } from '../context/CoctailContext';
 import Button from './Button';
 
 const FilterButtons = () => {
