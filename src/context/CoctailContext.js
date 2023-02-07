@@ -6,29 +6,32 @@ export const CoctailContext = createContext();
 const CoctailProvider = ({ children }) => {
   const [coctails, setCoctails] = useState([]);
   const [drink, setDrink] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const fetchCoctails = async (endpoint) => {
+    setLoading(true);
     const response = await fetch(`${baseURL(endpoint)}`);
     const data = await response.json();
     setCoctails(data.drinks);
+    setTimeout(() => setLoading(false), 1000);
   };
 
   useEffect(() => {
     fetchCoctails('/filter.php?c=Ordinary_Drink');
   }, []);
 
-  const fetchByID = async (id) => {
-    const response = await fetch(
-      `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
-    );
+  const fetchByID = async (endpoint) => {
+    console.log('endpoint', endpoint);
+    setLoading(true);
+    const response = await fetch(`${baseURL(endpoint)}`);
     const data = await response.json();
-
     setDrink(data.drinks[0]);
+    setTimeout(() => setLoading(false), 1000);
   };
 
   return (
     <CoctailContext.Provider
-      value={{ coctails, fetchCoctails, fetchByID, drink }}>
+      value={{ coctails, fetchCoctails, fetchByID, drink, loading }}>
       {children}
     </CoctailContext.Provider>
   );

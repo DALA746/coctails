@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { CoctailContext } from '../context/CoctailContext';
 import Button from './Button';
 
@@ -34,6 +34,7 @@ const FilterButtons = () => {
         {buttons.map((btn) => {
           return (
             <Button
+              key={btn.id}
               onClick={() => fetchCoctails(btn.endpoint)}
               btnText={btn.buttonName}
             />

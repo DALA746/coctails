@@ -1,14 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { CoctailContext } from '../context/CoctailContext';
 
 const Coctail = ({ coctail }) => {
   const { strDrinkThumb, strDrink, idDrink } = coctail;
-  const { fetchByID } = useContext(CoctailContext);
 
   return (
-    <Link to={`/drinks/${idDrink}`} onClick={() => fetchByID(idDrink)}>
-      <div className="border-2 border-secondary rounded hover:scale-105 hover:drop-shadow-xl transition-all">
+    <Link to={`/drinks/${idDrink}`}>
+      <div className="h-[351px] border-2 border-secondary rounded hover:scale-105 hover:drop-shadow-xl transition-all">
         <div>
           <img
             src={strDrinkThumb}

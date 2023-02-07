@@ -19,6 +19,8 @@ change react small logo in tab
 
 linked in meta links
 
+error handeling when fetch error
+
 ---
 
 For this project I used CoctailDB Api, coded whole project in React using React Hooks included useState, useEffext, useContext. For styling I used Tailwind CSS library. This project goal was to dive into Tailwind and learn more about it.
