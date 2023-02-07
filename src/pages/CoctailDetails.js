@@ -57,24 +57,24 @@ const CoctailDetails = () => {
 
   return (
     <>
-      <section className="bg-background flex justify-center items-center p-8">
+      <section className="bg-backgroundSingleCoctail flex justify-center items-center p-8">
         {loading ? (
-          <div className="w-full text-center flex justify-center items-center h-[70vh]">
+          <div className="w-full text-center flex justify-center items-center h-screen">
             <BeatLoader color="#E12490" />
           </div>
         ) : (
-          <div className="flex flex-col gap-6 items-center justify-center">
+          <div className="flex flex-col gap-6 items-center justify-center max-w-[1024px]">
             <Button btnText={'Back'} onClick={goBack} />
-            <div className="w-full flex flex-col lg:flex-row container mx-auto">
-              <div className="lg:w-[50%] lg:h-auto flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
+            <div className="w-full flex flex-col md:flex-row mx-auto">
+              <div className="md:w-[50%] md:h-auto">
                 <img
-                  className="w-full h-full"
+                  className="w-full h-full object-cover"
                   src={drink.strDrinkThumb}
                   alt="#"
                 />
               </div>
-              <div className="bg-secondary lg:w-[50%] text-center  rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-center leading-normal">
-                <h1 className="text-7xl font-medium mb-2 mx-auto lg:mx-0 font-secondary">
+              <div className="bg-secondary md:w-[50%] text-center p-4 flex flex-col justify-center">
+                <h1 className="text-3xl font-medium mb-2 mx-auto lg:mx-0">
                   {drink.strDrink}
                 </h1>
                 <p className="mb-8 italic ">{drink.strAlcoholic}</p>

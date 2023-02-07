@@ -17,17 +17,16 @@ const Home = () => {
       <Hero />
       <section className="py-16 bg-slate-100">
         <div className="container mx-auto">
-          <h1 className="font-bold text-7xl text-palePink mb-8">
-            Our Coctails 🍹
+          <h1 className="font-bold text-5xl text-palePink mb-8">
+            Our 🍹 Coctails
           </h1>
           <p className="mb-8 max-w-[1024px] text-2xl leading-10 text-vividYellow">
             We have a variety of coctails in our sortiment. Choose between
-            alcoholic or non alcoholic drinks. You are welcome to browse our
-            coctails and if you have any feedback reach out to us.{' '}
+            coctails, drinks, alcoholic or non alcoholic recipes.
           </p>
           <FilterButtons />
           {loading ? (
-            <div className="w-full text-center flex justify-center items-center">
+            <div className="w-full text-center flex justify-center items-center h-[700px]">
               <BeatLoader color="#E12490" />
             </div>
           ) : (

@@ -32,7 +32,8 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('./img/coctail.jpg')",
-        background: "url('./img/confetti-doodles.svg')"
+        background: "url('./img/confetti-doodles.svg')",
+        backgroundSingleCoctail: "url('./img/confetti-doodles (1).svg')"
       }
     }
   },
