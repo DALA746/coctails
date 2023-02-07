@@ -7,7 +7,7 @@ import CoctailsDetails from './pages/CoctailDetails';
 
 const App = () => {
   return (
-    <div className="overflow-hidden bg- flex flex-col min-h-100vh ">
+    <div className="overflow-hidden bg- flex flex-col">
       <Router>
         <Header />
         <Routes>

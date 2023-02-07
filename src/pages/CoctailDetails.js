@@ -57,13 +57,13 @@ const CoctailDetails = () => {
 
   return (
     <>
-      <section className="bg-background flex justify-center items-center p-8 h-[70vh]">
+      <section className="bg-background flex justify-center items-center p-8">
         {loading ? (
           <div className="w-full text-center flex justify-center items-center h-[70vh]">
             <BeatLoader color="#E12490" />
           </div>
         ) : (
-          <div className="flex flex-col gap-6 items-center justify-center xl:h-[88vh]">
+          <div className="flex flex-col gap-6 items-center justify-center">
             <Button btnText={'Back'} onClick={goBack} />
             <div className="w-full flex flex-col lg:flex-row container mx-auto">
               <div className="lg:w-[50%] lg:h-auto flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">

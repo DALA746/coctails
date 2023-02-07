@@ -31,4 +31,4 @@ What I love most about Tailwind, it is fast to build project, it was easy to set
 
 I really had fun with this project. I had a vision to create a digital coctail book so people could visit my site and maybe find an inpirations for for coctails to make before party.
 
-Project live: https://main--celebrated-griffin-866b17.netlify.app/
+Project live: https://fancy-coctails.netlify.app/
