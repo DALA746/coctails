@@ -9,10 +9,6 @@ module.exports = {
       md: '5px 5px 0px #E12490',
       none: '0 0 #0000'
     },
-    borderWidth: {
-      0: '5px',
-      1: '1px'
-    },
     container: {
       padding: {
         DEFAULT: '30px',

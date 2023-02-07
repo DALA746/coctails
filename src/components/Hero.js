@@ -1,5 +1,6 @@
 import React from 'react';
 import CoctailImg from '../img/blue.jpg';
+import Button from '../components/Button';
 
 const Hero = () => {
   return (
@@ -14,7 +15,8 @@ const Hero = () => {
         <h2 className=" text-2xl text-white text-center mt-8 mb-8 ">
           Your digital coctail book
         </h2>
-        <span className="text-4xl">😎🍹☀️</span>
+        <span className="text-4xl mt-8 mb-8">😎🍹☀️</span>
+        <Button btnText={'Get me random'} />
       </div>
     </div>
   );

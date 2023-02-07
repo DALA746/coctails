@@ -4,16 +4,12 @@ import { CoctailContext } from '../context/CoctailContext';
 
 const CoctailDetails = () => {
   const { id } = useParams();
-  const { fetchByID, drink } = useContext(CoctailContext);
+  const { drink } = useContext(CoctailContext);
   //const [loading, setLoading] = useState(false);
   let ingredientsArray = [];
   let measureArray = [];
 
   let ingredientsAndMeasure = [];
-
-  useEffect(() => {
-    fetchByID(id);
-  }, [id]);
 
   if (!drink) {
     return (
