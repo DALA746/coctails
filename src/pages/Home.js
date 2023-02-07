@@ -27,7 +27,7 @@ const Home = () => {
           </p>
           <FilterButtons />
           {loading ? (
-            <div className="w-full text-center flex justify-center items-center h-[70vh]">
+            <div className="w-full text-center flex justify-center items-center">
               <BeatLoader color="#E12490" />
             </div>
           ) : (
