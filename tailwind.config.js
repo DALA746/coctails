@@ -35,7 +35,7 @@ module.exports = {
         cyanBlue: '#8ed1fc'
       },
       backgroundImage: {
-        hero: "url('./img/drink.jpg')",
+        hero: "url('./img/coctail.jpg')",
         background: "url('./img/confetti-doodles.svg')"
       }
     }
