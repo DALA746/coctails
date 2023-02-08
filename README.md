@@ -1,34 +1,18 @@
-# coctails-app
+# Fancy Coctails build with React & TailwindCSS🍹
 
-- skapa repo på github ✅
-- style details sida
-  - fixa knappen to main, position och styling
-- ingredients combine all into one string or array? ✅
-- hero styuling - change to image instead???
-- about us page
-- promp with different drinks on blue background
-- load more button when scrolling ✅
+For this project, I used [The CoctailDB](https://www.thecocktaildb.com/) and coded the whole project in React using React Hooks including useState, useEffect, useContext, etc. For styling, I used Tailwind CSS library. This project goal was to dive into TailwindCSS and learn more about it.
 
-loading
-responsive card
-footer at the same place
+I learned how to set up/connect Taiwind to the project, use the configuration file for custom styling, and how to style responsive webpages with Tailwind. Would I use Taiwind again for my future projects? Yes, I would!
 
-responsive height for card
+The whole styling experience was really fast and effective and I didn't have to spend time coming up with class names. The possibility for customization and building project fast is the reason I would choose this library again for my next projects.
 
-change react small logo in tab
+I really had fun with this project 😄. I had the vision to create a digital cocktail book so people could visit this site and find some inspiring cocktail recipes for their parties.🍹
 
-linked in meta links
+I am open for feedback if you have any suggestions about code or design or if you find any bugs please report me so I can improve them.
 
-error handeling when fetch error
-
----
-
-For this project I used CoctailDB Api, coded whole project in React using React Hooks included useState, useEffext, useContext. For styling I used Tailwind CSS library. This project goal was to dive into Tailwind and learn more about it.
-
-I learned how to set up/connect Taiwind to the project, use cofiguration file for custom style, use short name of classes. Would I use Taiwind again for my future projects? Yes, for some project not for all.
-
-What I love most about Tailwind, it is fast to build project, it was easy to set up. Tailwind deploys everything fast and delete all unnececery classes. This is was my first time using useContent. I think it was easy to use and a great alternative for other statemagment tools such as Redux.
-
-I really had fun with this project. I had a vision to create a digital coctail book so people could visit my site and maybe find an inpirations for for coctails to make before party.
+Icons: [React Icons](https://react-icons.github.io/react-icons/)
+Images: [Unsplash](https://unsplash.com/)
+API: [The CoctailDB](https://www.thecocktaildb.com/)
+Styling: [TailwindCSS](https://tailwindcss.com/)
 
 Project live: https://fancy-coctails.netlify.app/

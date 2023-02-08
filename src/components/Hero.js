@@ -1,6 +1,7 @@
 import React from 'react';
 import CoctailImg from '../img/blue.webp';
 //import Button from '../components/Button';
+import { FaArrowCircleDown } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -16,6 +17,7 @@ const Hero = () => {
           Your digital coctail book
         </h2>
         <span className="text-4xl">😎🍹☀️</span>
+        <FaArrowCircleDown className="text-4xl text-cyanBlue animate-bounce" />
 
         {/* <Button btnText={'Get me random'} /> */}
       </div>
