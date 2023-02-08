@@ -57,7 +57,7 @@ const CoctailDetails = () => {
 
   return (
     <>
-      <section className="bg-backgroundSingleCoctail flex justify-center items-center p-8 h-full">
+      <section className="bg-backgroundSingleCoctail bg-cover bg-no-repeat bg-flex justify-center items-center p-8 h-full">
         <div className="flex flex-col gap-6 items-center justify-center max-w-[1024px]">
           {loading ? (
             <div className="w-full text-center flex justify-center items-center h-screen">
