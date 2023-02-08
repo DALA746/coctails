@@ -22,6 +22,8 @@ const CoctailDetails = () => {
     navigate(-1);
   };
 
+  console.log('DRINK', drink);
+
   if (!drink) {
     return (
       <section className="h-screen flex justify-center items-center">
@@ -53,51 +55,50 @@ const CoctailDetails = () => {
         measureArray[i] + '\xa0' + ingredientsArray[i]
       );
     }
+    ingredientsAndMeasure.push(ingredientsArray[i]);
   }
 
   return (
     <>
-      <section className="bg-backgroundSingleCoctail bg-cover bg-no-repeat bg-flex justify-center items-center p-8 h-full">
-        <div className="flex flex-col gap-6 items-center justify-center max-w-[1024px]">
-          {loading ? (
-            <div className="w-full text-center flex justify-center items-center h-screen">
-              <BeatLoader color="#E12490" />
-            </div>
-          ) : (
-            <>
-              <Button btnText={'Back'} onClick={goBack} />
-              <div className="w-full flex flex-col sm:flex-row mx-auto">
-                <div className="md:w-[50%] md:h-auto">
-                  <img
-                    className="w-full h-full object-cover"
-                    src={drink.strDrinkThumb}
-                    alt="#"
-                  />
+      <section className="bg-backgroundSingleCoctail bg-cover bg-no-repeat flex justify-center items-center p-8 sm:h-screen">
+        {loading ? (
+          <div className="w-full text-center flex justify-center items-center h-screen">
+            <BeatLoader color="#E12490" />
+          </div>
+        ) : (
+          <div className="flex flex-col gap-6 items-center justify-center max-w-[1024px] sc:h-screen">
+            <Button btnText={'Back'} onClick={goBack} />
+            <div className="w-full flex flex-col sm:flex-row mx-auto rounded">
+              <div className="sm:w-[50%] sm:h-auto">
+                <img
+                  className="w-full h-full object-cover"
+                  src={drink.strDrinkThumb}
+                  alt="#"
+                />
+              </div>
+              <div className="bg-secondary sm:w-[50%] text-center p-4 flex flex-col justify-center  border rounded">
+                <h1 className="text-3xl font-medium mb-2 mx-auto lg:mx-0">
+                  {drink.strDrink}
+                </h1>
+                <p className="mb-8 italic ">{drink.strAlcoholic}</p>
+                <span className="font-bold uppercase">Ingredients: </span>
+                <span className="border-2 border-palePink w-[200px] mb-4 mt-4 flex mx-auto"></span>
+                <div className="flex flex-col">
+                  {ingredientsAndMeasure.map((item) => {
+                    return <p key={item}>{item}</p>;
+                  })}
                 </div>
-                <div className="bg-secondary md:w-[50%] text-center p-4 flex flex-col justify-center">
-                  <h1 className="text-3xl font-medium mb-2 mx-auto lg:mx-0">
-                    {drink.strDrink}
-                  </h1>
-                  <p className="mb-8 italic ">{drink.strAlcoholic}</p>
-                  <span className="font-bold uppercase">Ingredients: </span>
-                  <span className="border-2 border-palePink w-[200px] mb-4 mt-4 flex mx-auto"></span>
-                  <div className="flex flex-col">
-                    {ingredientsAndMeasure.map((item) => {
-                      return <p key={item}>{item}</p>;
-                    })}
-                  </div>
-                  <span className="border-2 border-palePink w-[200px] mb-4 mt-4 flex mx-auto"></span>
-                  <div className="flex flex-col justify-center items-center">
-                    <span className="font-bold uppercase">How to make:</span>{' '}
-                    <p className="text-center">
-                      {drink.strInstructions ? drink.strInstructions : '-'}
-                    </p>
-                  </div>
+                <span className="border-2 border-palePink w-[200px] mb-4 mt-4 flex mx-auto"></span>
+                <div className="flex flex-col justify-center items-center">
+                  <span className="font-bold uppercase">How to make:</span>{' '}
+                  <p className="text-center">
+                    {drink.strInstructions ? drink.strInstructions : '-'}
+                  </p>
                 </div>
               </div>
-            </>
-          )}
-        </div>
+            </div>
+          </div>
+        )}
       </section>
     </>
   );

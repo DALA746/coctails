@@ -36,12 +36,14 @@ const Home = () => {
                   return <Coctail key={coctail.idDrink} coctail={coctail} />;
                 })}
               </div>
-              <div className="w-full flex justify-center">
-                <Button
-                  onClick={() => setVisible((prevValue) => prevValue + 10)}
-                  btnText="MORE"
-                />
-              </div>
+              {coctails.length !== visible && (
+                <div className="w-full flex justify-center">
+                  <Button
+                    onClick={() => setVisible((prevValue) => prevValue + 10)}
+                    btnText="MORE"
+                  />
+                </div>
+              )}
             </>
           )}
         </div>

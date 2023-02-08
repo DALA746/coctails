@@ -29,7 +29,7 @@ const FilterButtons = () => {
   ];
 
   return (
-    <section className="w-full flex  items-center justify-center">
+    <section className="w-full flex items-center justify-center">
       <div className="container mx-auto flex flex-col items-center md:flex-row gap-8">
         {buttons.map((btn) => {
           return (

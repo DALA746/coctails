@@ -8,11 +8,8 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between h-full">
         {/* logo */}
         <Link to={'/'}>
-          <BiDrink className="text-4xl text-palePink animate-bounce" />
+          <BiDrink className="text-4xl text-palePink" />
         </Link>
-        <div className="flex gap-7">
-          <h1 className="font-bold text-palePink">ABOUT</h1>
-        </div>
       </div>
     </header>
   );
