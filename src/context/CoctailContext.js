@@ -21,7 +21,6 @@ const CoctailProvider = ({ children }) => {
   }, []);
 
   const fetchByID = async (endpoint) => {
-    console.log('endpoint', endpoint);
     setLoading(true);
     const response = await fetch(`${baseURL(endpoint)}`);
     const data = await response.json();
