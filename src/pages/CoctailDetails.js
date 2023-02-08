@@ -57,7 +57,7 @@ const CoctailDetails = () => {
 
   return (
     <>
-      <section className="bg-backgroundSingleCoctail flex justify-center items-center p-8">
+      <section className="bg-backgroundSingleCoctail flex justify-center items-center p-8 h-screen">
         {loading ? (
           <div className="w-full text-center flex justify-center items-center h-screen">
             <BeatLoader color="#E12490" />
@@ -65,7 +65,7 @@ const CoctailDetails = () => {
         ) : (
           <div className="flex flex-col gap-6 items-center justify-center max-w-[1024px]">
             <Button btnText={'Back'} onClick={goBack} />
-            <div className="w-full flex flex-col md:flex-row mx-auto">
+            <div className="w-full flex flex-col sm:flex-row mx-auto">
               <div className="md:w-[50%] md:h-auto">
                 <img
                   className="w-full h-full object-cover"
