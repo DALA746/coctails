@@ -1,4 +1,4 @@
-# Fancy Coctails build with React & TailwindCSS🍹
+# Fancy Coctails with React & Tailwind CSS🍹
 
 For this project, I used [The CoctailDB](https://www.thecocktaildb.com/) and coded the whole project in React using React Hooks including useState, useEffect, useContext, etc. For styling, I used Tailwind CSS library. This project goal was to dive into TailwindCSS and learn more about it.
 
@@ -8,11 +8,11 @@ The whole styling experience was really fast and effective 🏃‍♀️ and I d
 
 I really had fun with this project 😄. I had the vision to create a digital cocktail book so people could visit this site and find some inspiring cocktail recipes for their parties.🍹
 
-I am open for feedback if you have any suggestions about code or design or if you find any bugs please report me so I can improve them. 😁
+I am open for feedback if you have any suggestions about code or design or if you find any bugs please report me so I can fix them. 😁
 
 - Icons: [React Icons](https://react-icons.github.io/react-icons/)
 - Images: [Unsplash](https://unsplash.com/)
 - API: [The CoctailDB](https://www.thecocktaildb.com/)
 - Styling: [TailwindCSS](https://tailwindcss.com/)
 
-Project live: https://fancy-coctails.netlify.app/
+Demo: https://fancy-coctails.netlify.app/
