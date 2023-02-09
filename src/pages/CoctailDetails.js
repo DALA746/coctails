@@ -63,7 +63,7 @@ const CoctailDetails = () => {
       <section className="bg-backgroundSingleCoctail bg-cover bg-no-repeat flex justify-center items-center p-8 sm:h-screen">
         {loading ? (
           <div className="w-full text-center flex justify-center items-center h-screen">
-            <BeatLoader color="#E12490" />
+            <BeatLoader color="#01c6f5" />
           </div>
         ) : (
           <div className="flex flex-col gap-6 items-center justify-center max-w-[1024px] sc:h-screen">

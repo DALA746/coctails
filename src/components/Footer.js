@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="mt-auto drop-shadow-lg">
       <div className="bg-vividYellow py-8">
-        <p className="text-palePink text-center font-bold ">
+        <p className="text-palePink text-center">
           &copy; FANCY COCTAILS APP made by{' '}
           <a
             href="https://github.com/DALA746"

@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <section className="py-16 bg-slate-100">
+      <section className="py-16 bg-secondary">
         <div className="container mx-auto">
           <h1 className="font-bold text-5xl text-palePink mb-8">
             Our 🍹 Coctails
@@ -27,7 +27,7 @@ const Home = () => {
           <FilterButtons />
           {loading ? (
             <div className="w-full text-center flex justify-center items-center h-[700px]">
-              <BeatLoader color="#E12490" />
+              <BeatLoader color="#01c6f5" />
             </div>
           ) : (
             <>
@@ -36,7 +36,7 @@ const Home = () => {
                   return <Coctail key={coctail.idDrink} coctail={coctail} />;
                 })}
               </div>
-              {coctails.length !== visible && (
+              {coctails.length > visible && (
                 <div className="w-full flex justify-center">
                   <Button
                     onClick={() => setVisible((prevValue) => prevValue + 10)}

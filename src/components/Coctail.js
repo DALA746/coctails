@@ -6,7 +6,7 @@ const Coctail = ({ coctail }) => {
 
   return (
     <Link to={`/drinks/${idDrink}`}>
-      <div className="border-2 border-secondary rounded hover:scale-105 hover:drop-shadow-xl transition-all lg:h-[340px]">
+      <div className="border-2 border-secondary bg-secondary rounded hover:scale-105 hover:drop-shadow-xl transition-all lg:h-[340px]">
         <div>
           <img
             src={strDrinkThumb}

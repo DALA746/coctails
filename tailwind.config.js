@@ -24,11 +24,11 @@ module.exports = {
     extend: {
       colors: {
         primary: '#222222',
-        secondary: '#F5E6E0',
-        palePink: '#E12490',
-        vividOrange: '#ff6900',
-        vividYellow: '#fcb900',
-        cyanBlue: '#8ed1fc'
+        secondary: '#ffebe0',
+        palePink: '#ac0729',
+        vividOrange: '#e5903b',
+        vividYellow: '#ffbe47',
+        cyanBlue: '#01c6f5'
       },
       backgroundImage: {
         hero: "url('./img/coctail.jpg')",
