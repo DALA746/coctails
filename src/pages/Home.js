@@ -1,28 +1,26 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { CoctailContext } from '../context/CoctailContext';
 import Coctail from '../components/Coctail';
-import Hero from '../components/Hero';
 import Button from '../components/Button';
 import FilterButtons from '../components/FilterButtons';
 import BeatLoader from 'react-spinners/BeatLoader';
 
 const Home = () => {
-  // get coctails from coctails context
   const { coctails, loading } = useContext(CoctailContext);
-  // how many coctails to show
   const [visible, setVisible] = useState(10);
 
   return (
-    <div>
-      <Hero />
-      <section className="py-16 bg-secondary">
+    <main>
+      <section className="py-4 bg-secondary md:py-16">
         <div className="container mx-auto">
           <h1 className="font-bold text-5xl text-palePink mb-8">
-            Our 🍹 Coctails
+            Welcome to FANCY 🍹 Cocktails!
           </h1>
-          <p className="mb-8 max-w-[1024px] text-2xl leading-10 text-vividYellow">
-            We have a variety of coctails in our sortiment. Choose between
-            coctails, drinks, alcoholic or non alcoholic recipes.
+          <p className="mb-10 text-2xl leading-10 text-palePink">
+            Looking for inspiration for your next cocktail party? You've come to
+            the right place! Explore our curated collection of drink recipes –
+            from classic cocktails to creative mocktails. Mix it up and impress
+            your guests with drinks they'll love.
           </p>
           <FilterButtons />
           {loading ? (
@@ -48,7 +46,7 @@ const Home = () => {
           )}
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

@@ -5,6 +5,7 @@ import App from './App';
 import CoctailProvider from '../src/context/CoctailContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <CoctailProvider>
     <React.StrictMode>

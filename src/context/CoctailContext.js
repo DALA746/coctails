@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect } from 'react';
 import { baseURL } from '../utils/utils';
 
 export const CoctailContext = createContext();

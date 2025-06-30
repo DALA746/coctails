@@ -8,7 +8,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
-    <div className="overflow-hidden bg- flex flex-col">
+    <div className="flex flex-col min-h-screen bg-secondary">
       <Router>
         <ScrollToTop />
         <Header />

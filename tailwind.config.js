@@ -29,11 +29,6 @@ module.exports = {
         vividOrange: '#e5903b',
         vividYellow: '#ffbe47',
         cyanBlue: '#01c6f5'
-      },
-      backgroundImage: {
-        hero: "url('./img/coctail.jpg')",
-        background: "url('./img/confetti-doodles.svg')",
-        backgroundSingleCoctail: "url('./img/confetti-doodles (1).svg')"
       }
     }
   },
