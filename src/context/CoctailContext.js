@@ -13,7 +13,7 @@ const CoctailProvider = ({ children }) => {
     const response = await fetch(`${baseURL(endpoint)}`);
     const data = await response.json();
     setCoctails(data.drinks);
-    setTimeout(() => setLoading(false), 1000);
+    setLoading(false);
   };
 
   useEffect(() => {
