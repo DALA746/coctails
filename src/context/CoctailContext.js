@@ -9,11 +9,17 @@ const CoctailProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
 
   const fetchCoctails = async (endpoint) => {
-    setLoading(true);
-    const response = await fetch(`${baseURL(endpoint)}`);
-    const data = await response.json();
-    setCoctails(data.drinks);
-    setLoading(false);
+    try {
+      setLoading(true);
+      const response = await fetch(`${baseURL(endpoint)}`);
+      const data = await response.json();
+      setCoctails(data.drinks);
+      setLoading(false);
+    } catch (error) {
+      console.error('Error fetching cocktails:', error);
+      setLoading(false);
+      return;
+    }
   };
 
   useEffect(() => {
@@ -21,11 +27,17 @@ const CoctailProvider = ({ children }) => {
   }, []);
 
   const fetchByID = async (endpoint) => {
-    setLoading(true);
-    const response = await fetch(`${baseURL(endpoint)}`);
-    const data = await response.json();
-    setDrink(data.drinks[0]);
-    setTimeout(() => setLoading(false), 1000);
+    try {
+      setLoading(true);
+      const response = await fetch(`${baseURL(endpoint)}`);
+      const data = await response.json();
+      setDrink(data.drinks[0]);
+      setTimeout(() => setLoading(false), 1000);
+    } catch (error) {
+      console.error('Error fetching cocktail by ID:', error);
+      setLoading(false);
+      return;
+    }
   };
 
   return (

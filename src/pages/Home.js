@@ -9,6 +9,16 @@ const Home = () => {
   const { coctails, loading } = useContext(CoctailContext);
   const [visible, setVisible] = useState(10);
 
+  if (!coctails || coctails.length === 0) {
+    return (
+      <div className="w-full text-center flex justify-center items-center h-[700px]">
+        <p className="text-2xl text-palePink">
+          No cocktails found. Please try again later.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <main>
       <section className="py-4 bg-secondary md:py-16">
@@ -16,7 +26,7 @@ const Home = () => {
           <h1 className="font-bold text-5xl text-palePink mb-8">
             Welcome to FANCY 🍹 Cocktails!
           </h1>
-          <p className="mb-10 text-2xl leading-10 text-palePink">
+          <p className="mb-10 text-2xl leading-10 text-palePink w-full max-w-[1000px]">
             Looking for inspiration for your next cocktail party? You've come to
             the right place! Explore our curated collection of drink recipes –
             from classic cocktails to creative mocktails. Mix it up and impress
