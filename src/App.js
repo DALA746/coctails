@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Footer from './components/Footer';
 import CoctailsDetails from './pages/CoctailDetails';
 import ScrollToTop from './components/ScrollToTop';
+import RandomPage from './pages/Random';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/drinks/:id" element={<CoctailsDetails />} />
+          <Route path="/random" element={<RandomPage />} />
         </Routes>
         <Footer />
       </Router>

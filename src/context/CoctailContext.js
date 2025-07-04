@@ -7,10 +7,14 @@ const CoctailProvider = ({ children }) => {
   const [coctails, setCoctails] = useState([]);
   const [drink, setDrink] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [selectedFilter, setSelectedFilter] = useState(
+    '/filter.php?c=Cocktail'
+  );
 
   const fetchCoctails = async (endpoint) => {
     try {
       setLoading(true);
+      setSelectedFilter(endpoint);
       const response = await fetch(`${baseURL(endpoint)}`);
       const data = await response.json();
       setCoctails(data.drinks);
@@ -40,9 +44,30 @@ const CoctailProvider = ({ children }) => {
     }
   };
 
+  const fetchRandomCoctail = async (endpoint) => {
+    try {
+      setLoading(true);
+      const response = await fetch(`${baseURL(endpoint)}`);
+      const data = await response.json();
+      setDrink(data.drinks[0]);
+    } catch (err) {
+      console.error('Error fetching random cocktail:', err);
+      return null;
+    }
+  };
+
   return (
     <CoctailContext.Provider
-      value={{ coctails, fetchCoctails, fetchByID, drink, loading }}>
+      value={{
+        coctails,
+        fetchCoctails,
+        fetchByID,
+        fetchRandomCoctail,
+        setDrink,
+        selectedFilter,
+        drink,
+        loading
+      }}>
       {children}
     </CoctailContext.Provider>
   );
