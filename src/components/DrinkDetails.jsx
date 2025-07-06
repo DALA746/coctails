@@ -1,3 +1,5 @@
+import NotFound from './NotFound';
+
 const DrinkDetails = ({ drink }) => {
   const ingredientsAndMeasure = [];
   for (let i = 1; i <= 15; i++) {
@@ -10,8 +12,12 @@ const DrinkDetails = ({ drink }) => {
     }
   }
 
+  if (!drink || drink.length === 0) {
+    return <NotFound />;
+  }
+
   return (
-    <section className="flex flex-col m-5 gap-4 justify-center items-center">
+    <div className="flex flex-col m-5 gap-4 justify-center items-center">
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold mb-2 text-center">
           {drink.strDrink}
@@ -43,7 +49,7 @@ const DrinkDetails = ({ drink }) => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

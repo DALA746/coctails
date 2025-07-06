@@ -1,24 +1,6 @@
-import { useContext, useState } from 'react';
-import { CoctailContext } from '../context/CoctailContext';
-import Button from '../components/Button';
-import FilterButtons from '../components/FilterButtons';
-import BeatLoader from 'react-spinners/BeatLoader';
 import CocktailGridContainer from '../components/CoctailGridContainer';
 
 const Home = () => {
-  const { coctails, loading } = useContext(CoctailContext);
-  const [visible, setVisible] = useState(10);
-
-  if (!coctails || coctails.length === 0 || coctails === 'no data found') {
-    return (
-      <div className="w-full text-center flex justify-center items-center h-[700px]">
-        <p className="text-2xl text-palePink">
-          No cocktails found. Please try again later.
-        </p>
-      </div>
-    );
-  }
-
   return (
     <main className="py-4 bg-secondary md:py-16">
       <div className="container mx-auto">
@@ -31,25 +13,7 @@ const Home = () => {
           from classic cocktails to creative mocktails. Mix it up and impress
           your guests with drinks they'll love.
         </p>
-
-        {loading ? (
-          <div className="w-full text-center flex justify-center items-center h-[700px]">
-            <BeatLoader color="#01c6f5" />
-          </div>
-        ) : (
-          <>
-            <FilterButtons coctailsLength={coctails.length} />
-            <CocktailGridContainer coctails={coctails} visible={visible} />
-            {coctails.length > visible && (
-              <div className="w-full flex justify-center">
-                <Button
-                  onClick={() => setVisible((prevValue) => prevValue + 10)}
-                  btnText="MORE"
-                />
-              </div>
-            )}
-          </>
-        )}
+        <CocktailGridContainer />
       </div>
     </main>
   );
